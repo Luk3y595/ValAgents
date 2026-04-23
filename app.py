@@ -2,7 +2,7 @@ from flask import Flask, g, render_template
 import sqlite3
 
 # Database Function
-DATABASE = 'Database.db'
+DATABASE = 'ValAgents.db'
 
 # Initialise App
 app = Flask(__name__)
