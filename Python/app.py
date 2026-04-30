@@ -8,6 +8,12 @@ DATABASE = 'ValAgents.db'
 app = Flask(__name__)
 
 
+@app.route('/')
+def home():
+    #home page
+    return render_template('home.html')
+
+
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
