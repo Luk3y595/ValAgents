@@ -12,7 +12,9 @@ app = Flask(__name__)
 def home():
     #home page - shows only 
     sql = """
-                SELECT 
+                SELECT AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
+                FROM AgentInfo
+                JOIN Role ON Role.role_id=AgentInfo.role_id;
 """
     results = query_db(sql)
     return render_template('home.html', results=results)
