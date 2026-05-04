@@ -10,8 +10,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    #home page
-    return render_template('home.html')
+    #home page - shows only 
+    sql = """
+                SELECT 
+"""
+    results = query_db(sql)
+    return render_template('home.html', results=results)
 
 
 def get_db():
