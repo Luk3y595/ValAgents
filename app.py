@@ -20,7 +20,7 @@ def home():
     return render_template('home.html', result=results)
 
 
-@app.route('/duelist')
+@app.route('/duelist.html')
 def duelist():
     #home page - duelist only
     sql = """
@@ -33,7 +33,7 @@ def duelist():
     return render_template('duelist.html', duelist=results)
 
 
-@app.route('/initiator')
+@app.route('/initiator.html')
 def initiator():
     #home page - initiator only
     sql = """
@@ -46,7 +46,7 @@ def initiator():
     return render_template('duelist.html', initiator=results)
 
 
-@app.route('/sentinel')
+@app.route('/sentinel.html')
 def sentinel():
     #home page - sentinel only
     sql = """
@@ -59,7 +59,7 @@ def sentinel():
     return render_template('duelist.html', sentinel=results)
 
 
-@app.route('/controller')
+@app.route('/controller.html')
 def controller():
     #home page - controller only
     sql = """
