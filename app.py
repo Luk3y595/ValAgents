@@ -29,6 +29,8 @@ def duelist():
                 JOIN Role ON Role.role_id=AgentInfo.role_id;
                 WHERE AgentInfo.role_id = '1';
 """
+    results = query_db(sql)
+    return render_template('duelist.html', duelist=results)
 
 
 @app.route('/initiator')
@@ -40,6 +42,8 @@ def initiator():
                 JOIN Role ON Role.role_id=AgentInfo.role_id;
                 WHERE AgentInfo.role_id = '2';
 """
+    results = query_db(sql)
+    return render_template('duelist.html', initiator=results)
 
 
 @app.route('/sentinel')
@@ -51,6 +55,8 @@ def sentinel():
                 JOIN Role ON Role.role_id=AgentInfo.role_id;
                 WHERE AgentInfo.role_id = '3';
 """
+    results = query_db(sql)
+    return render_template('duelist.html', sentinel=results)
 
 
 @app.route('/controller')
@@ -62,6 +68,8 @@ def controller():
                 JOIN Role ON Role.role_id=AgentInfo.role_id;
                 WHERE AgentInfo.role_id = '4';
 """
+    results = query_db(sql)
+    return render_template('duelist.html', controller=results)
 
 
 def get_db():
