@@ -26,7 +26,7 @@ def duelist():
     sql = """
                 SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
-                JOIN Role ON Role.role_id=AgentInfo.role_id;
+                JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '1';
 """
     results = query_db(sql)
@@ -39,7 +39,7 @@ def initiator():
     sql = """
                 SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
-                JOIN Role ON Role.role_id=AgentInfo.role_id;
+                JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '2';
 """
     results = query_db(sql)
@@ -52,7 +52,7 @@ def sentinel():
     sql = """
                 SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
-                JOIN Role ON Role.role_id=AgentInfo.role_id;
+                JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '3';
 """
     results = query_db(sql)
@@ -65,7 +65,7 @@ def controller():
     sql = """
                 SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
-                JOIN Role ON Role.role_id=AgentInfo.role_id;
+                JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '4';
 """
     results = query_db(sql)
