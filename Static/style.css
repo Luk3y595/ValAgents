@@ -1,13 +1,15 @@
+/* CSS */
+/* title text */
 h1 {
-    /* for title */
     font-family: 'VALORANT', sans-serif;
 }
 
+/* regular text */
 h2,h3,h4,h5,h6 {
-    /* for regular text */
     font-family: 'TungstenBold', sans-serif;
 }
 
+/* added in custom font */
 @font-face {
     font-family: 'TungstenBold';
     src: url('Tungsten-Bold.woff2') format('woff2');
@@ -15,6 +17,7 @@ h2,h3,h4,h5,h6 {
     font-style: normal;
 }
 
+/* navbar colour */
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -24,7 +27,14 @@ h2,h3,h4,h5,h6 {
     background-color: #FF5052;
 }
 
+/* main background colour */
 body {
     background-color: #0c1824;
+}
+
+/* to remove the blue colour text and underline from href */
+a {
+  text-decoration: none;
+  color: #0c1824;
 }
 
