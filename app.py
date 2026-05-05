@@ -20,6 +20,50 @@ def home():
     return render_template('home.html', result=results)
 
 
+@app.route('/duelist')
+def duelist():
+    #home page - duelist only
+    sql = """
+                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
+                FROM AgentInfo
+                JOIN Role ON Role.role_id=AgentInfo.role_id;
+                WHERE AgentInfo.role_id = '1';
+"""
+
+
+@app.route('/initiator')
+def initiator():
+    #home page - initiator only
+    sql = """
+                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
+                FROM AgentInfo
+                JOIN Role ON Role.role_id=AgentInfo.role_id;
+                WHERE AgentInfo.role_id = '2';
+"""
+
+
+@app.route('/sentinel')
+def sentinel():
+    #home page - sentinel only
+    sql = """
+                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
+                FROM AgentInfo
+                JOIN Role ON Role.role_id=AgentInfo.role_id;
+                WHERE AgentInfo.role_id = '3';
+"""
+
+
+@app.route('/controller')
+def controller():
+    #home page - controller only
+    sql = """
+                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
+                FROM AgentInfo
+                JOIN Role ON Role.role_id=AgentInfo.role_id;
+                WHERE AgentInfo.role_id = '4';
+"""
+
+
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
