@@ -3,10 +3,10 @@
 <!-- Home page starts from here -->
  <!-- Will be 5 column layout to direct users to each agent -->
     <div class="five-column">
-        {% for agent in result %}
+        {% for controller in controller %}
         <div> 
             <!-- Shows ID card image and if it doesn't show should show agent name -->
-            <img src="{{ controller[3] }}" alt="{{ controller[1] }}">
+            <img src="{{ url_for('static', ) }}" alt="{{ controller[1] }}">
         </div>
         {% endfor %}
     </div>

@@ -38,3 +38,12 @@ a {
   color: #0c1824;
 }
 
+.Logo {
+    width: 60px;
+    height: 60px;
+    margin: 15px;
+}
+
+.roles-four-column {
+    margin: 15px;
+}

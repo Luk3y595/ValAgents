@@ -43,7 +43,7 @@ def initiator():
                 WHERE AgentInfo.role_id = '2';
 """
     results = query_db(sql)
-    return render_template('duelist.html', initiator=results)
+    return render_template('initiator.html', initiator=results)
 
 
 @app.route('/sentinel.html')
@@ -56,7 +56,7 @@ def sentinel():
                 WHERE AgentInfo.role_id = '3';
 """
     results = query_db(sql)
-    return render_template('duelist.html', sentinel=results)
+    return render_template('sentinel.html', sentinel=results)
 
 
 @app.route('/controller.html')
@@ -69,7 +69,7 @@ def controller():
                 WHERE AgentInfo.role_id = '4';
 """
     results = query_db(sql)
-    return render_template('duelist.html', controller=results)
+    return render_template('controller.html', controller=results)
 
 
 def get_db():
