@@ -6,7 +6,7 @@
         {% for sentinel in sentinel %}
         <div> 
             <!-- Shows ID card image and if it doesn't show should show agent name -->
-            <img src="{{ sentinel[3] }}" alt="{{ sentinel[1] }}">
+            <img src="{{url_for('static', filename=sentinel[3]) }}" alt="{{ sentinel[1] }}">
         </div>
         {% endfor %}
     </div>

@@ -6,7 +6,7 @@
         {% for duelist in duelist %}
         <div> 
             <!-- Shows ID card image and if it doesn't show should show agent name -->
-            <img src="{{ duelist[3] }}" alt="{{ duelist[1] }}">
+            <img src="{{url_for('static', filename=duelist[3]) }}" alt="{{ duelist[1] }}">
         </div>
         {% endfor %}
     </div>

@@ -6,7 +6,7 @@
         {% for initiator in initiator %}
         <div> 
             <!-- Shows ID card image and if it doesn't show should show agent name -->
-            <img src="{{ initiator[3] }}" alt="{{ initiator[1] }}">
+            <img src="{{url_for('static', filename=initiator[3]) }}" alt="{{ initiator[1] }}">
         </div>
         {% endfor %}
     </div>
