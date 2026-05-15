@@ -45,5 +45,12 @@ a {
 }
 
 .roles-four-column {
-    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 60px;
+    align-items: center;
+    text-align: center;
 }
