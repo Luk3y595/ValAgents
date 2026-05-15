@@ -10,9 +10,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    #home page - shows only 
+    # home page - shows only
     sql = """
-                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
+                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,
+                AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
                 JOIN Role ON Role.role_id=AgentInfo.role_id;
 """
@@ -22,9 +23,10 @@ def home():
 
 @app.route('/duelist.html')
 def duelist():
-    #home page - duelist only
+    # home page - duelist only
     sql = """
-                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
+                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,
+                AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
                 JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '1';
@@ -35,9 +37,10 @@ def duelist():
 
 @app.route('/initiator.html')
 def initiator():
-    #home page - initiator only
+    # home page - initiator only
     sql = """
-                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
+                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,
+                AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
                 JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '2';
@@ -48,9 +51,10 @@ def initiator():
 
 @app.route('/sentinel.html')
 def sentinel():
-    #home page - sentinel only
+    # home page - sentinel only
     sql = """
-                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
+                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,
+                AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
                 JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '3';
@@ -61,9 +65,10 @@ def sentinel():
 
 @app.route('/controller.html')
 def controller():
-    #home page - controller only
+    # home page - controller only
     sql = """
-                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,AgentInfo.agent_id_card_img_url
+                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,
+                AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
                 JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '4';
