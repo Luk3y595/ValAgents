@@ -4,10 +4,12 @@
  <!-- Will be 5 column layout to direct users to each agent -->
     <div class="five-column">
         {% for controller in controller %}
-        <div> 
-            <!-- Shows ID card image and if it doesn't show should show agent name -->
-            <img src="{{url_for('static', filename=controller[3]) }}" alt="{{ controller[1] }}">
-        </div>
+        <a href="agent.html">
+            <div> 
+                <!-- Shows ID card image and if it doesn't show should show agent name -->
+                <img src="{{url_for('static', filename=controller[3]) }}" alt="{{ controller[1] }}">
+            </div>
+        </a>
         {% endfor %}
     </div>
 {% endblock %}

@@ -4,10 +4,11 @@
  <!-- Will be 5 column layout to direct users to each agent -->
     <div class="five-column">
         {% for duelist in duelist %}
-        <div> 
-            <!-- Shows ID card image and if it doesn't show should show agent name -->
-            <img src="{{url_for('static', filename=duelist[3]) }}" alt="{{ duelist[1] }}">
-        </div>
+        <a href="agent.html">
+            <div> 
+                <!-- Shows ID card image and if it doesn't show should show agent name -->
+                <img src="{{url_for('static', filename=duelist[3]) }}" alt="{{ duelist[1] }}">
+            </div>
         {% endfor %}
     </div>
 {% endblock %}
