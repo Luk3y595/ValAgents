@@ -57,10 +57,15 @@ a {
 .five-column {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 40px;
+    gap: 40px; 
     padding: 20px;
     margin: auto;
     margin-top: 60px;
     align-items: center;
     text-align: center;
+}
+
+.full-image {
+    display: grid;
+    align-items: start;
 }
