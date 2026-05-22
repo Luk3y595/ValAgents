@@ -2,6 +2,6 @@
 {% block body %}
 <!-- Full image of the agent -->
  <div class="full-image">
-    <img src="{{url_for('static', filename='images/fullart/Brimstone_Artwork_Full.webp') }}" >
+    <img src="{{url_for('static', filename=agent[]) }}" alt="{{ agent[] }}">
  </div>
 {% endblock %}
