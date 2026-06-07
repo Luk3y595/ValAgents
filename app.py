@@ -34,7 +34,7 @@ def agent():
             AgentInfo.ability_two_description,AgentInfo.ability_three,AgentInfo.ability_three_description,
             AgentInfo.ultimate,AgentInfo.ultimate_description,AgentInfo.country_of_origin,AgentInfo.ability_img_url,
             AgentInfo.ability_two_img_url,AgentInfo.ability_three_img_url,AgentInfo.ability_four_img_url,
-            AgentInfo.ability_five_img_url,AgentInfo.ultimate_img_url,AgentInfo.fullart_img_id
+            AgentInfo.ability_five_img_url,AgentInfo.ultimate_img_url,AgentInfo.fullart_img_id,AgentInfo.agent_id_card_img_url
             FROM AgentInfo
             JOIN Role ON Role.role_id=AgentInfo.role_id
             JOIN BestMaps ON BestMaps.best_map_id=AgentInfo.best_map_id
