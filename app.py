@@ -64,7 +64,7 @@ def agent():
             JOIN Flag ON Flag.flag_id=AgentInfo.flag_id
 """
     results = query_db(sql)
-    return render_template('agent.html', agent=results)
+    return render_template('agent.html', character=results)
 
 
 @app.route('/duelist.html')

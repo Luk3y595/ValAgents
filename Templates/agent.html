@@ -1,7 +1,9 @@
 {% extends "layout.html" %}
 {% block body %}
 <!-- Full image of the agent -->
- <div class="full-image">
-    <img src="{{url_for('static', filename=agent[28]) }}" alt="{{ agent[1] }}">
- </div>
+ {% for agent in character %}
+   <div class="full-image">
+      <img src="{{url_for('static', filename=agent[27]) }}" alt="{{ agent[1] }}">
+   </div>
+ {% endfor %}
 {% endblock %}
