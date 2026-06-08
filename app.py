@@ -12,8 +12,11 @@ app = Flask(__name__)
 def home():
     # home page - shows only
     sql = """
-                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,
-                AgentInfo.agent_id_card_img_url
+                SELECT
+                    AgentInfo.agent_id,
+                    AgentInfo.name,
+                    Role.role,
+                    AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
                 JOIN Role ON Role.role_id=AgentInfo.role_id;
 """
@@ -25,16 +28,35 @@ def home():
 def agent():
     # agent page with all the info
     sql = """
-            SELECT AgentInfo.agent_id,
-            AgentInfo.name,Role.role,Flag.flag_img_url,
-            BestMaps.best_maps,BestMaps.map_image_url,WorstMaps.worst_maps,WorstMaps.map_image_url,
-            AgentInfo.signature_ability_one,AgentInfo.signature_ability_one_description,
-            AgentInfo.signature_ability_two,AgentInfo.signature_ability_two_description,
-            AgentInfo.ability_one,AgentInfo.ability_one_description,AgentInfo.ability_two,
-            AgentInfo.ability_two_description,AgentInfo.ability_three,AgentInfo.ability_three_description,
-            AgentInfo.ultimate,AgentInfo.ultimate_description,AgentInfo.country_of_origin,AgentInfo.ability_img_url,
-            AgentInfo.ability_two_img_url,AgentInfo.ability_three_img_url,AgentInfo.ability_four_img_url,
-            AgentInfo.ability_five_img_url,AgentInfo.ultimate_img_url,AgentInfo.fullart_img_id,AgentInfo.agent_id_card_img_url
+            SELECT
+                AgentInfo.agent_id,
+                AgentInfo.name,
+                Role.role,
+                Flag.flag_img_url,
+                BestMaps.best_maps,
+                BestMaps.map_image_url,
+                WorstMaps.worst_maps,
+                WorstMaps.map_image_url,
+                AgentInfo.signature_ability_one,
+                AgentInfo.signature_ability_one_description,
+                AgentInfo.signature_ability_two,
+                AgentInfo.signature_ability_two_description,
+                AgentInfo.ability_one,
+                AgentInfo.ability_one_description,
+                AgentInfo.ability_two,
+                AgentInfo.ability_two_description,
+                AgentInfo.ability_three,
+                AgentInfo.ability_three_description,
+                AgentInfo.ultimate,
+                AgentInfo.ultimate_description,
+                AgentInfo.country_of_origin,
+                AgentInfo.ability_img_url,
+                AgentInfo.ability_two_img_url,
+                AgentInfo.ability_three_img_url,
+                AgentInfo.ability_four_img_url,
+                AgentInfo.ability_five_img_url,
+                AgentInfo.ultimate_img_url,
+                AgentInfo.fullart_img_id
             FROM AgentInfo
             JOIN Role ON Role.role_id=AgentInfo.role_id
             JOIN BestMaps ON BestMaps.best_map_id=AgentInfo.best_map_id
@@ -49,8 +71,11 @@ def agent():
 def duelist():
     # home page - duelist only
     sql = """
-                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,
-                AgentInfo.agent_id_card_img_url
+                SELECT
+                    AgentInfo.agent_id,
+                    AgentInfo.name,
+                    Role.role,
+                    AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
                 JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '1';
@@ -63,8 +88,11 @@ def duelist():
 def initiator():
     # home page - initiator only
     sql = """
-                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,
-                AgentInfo.agent_id_card_img_url
+                SELECT
+                    AgentInfo.agent_id,
+                    AgentInfo.name,
+                    Role.role,
+                    AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
                 JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '2';
@@ -77,8 +105,11 @@ def initiator():
 def sentinel():
     # home page - sentinel only
     sql = """
-                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,
-                AgentInfo.agent_id_card_img_url
+                SELECT
+                    AgentInfo.agent_id,
+                    AgentInfo.name,
+                    Role.role,
+                    AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
                 JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '3';
@@ -91,8 +122,11 @@ def sentinel():
 def controller():
     # home page - controller only
     sql = """
-                SELECT AgentInfo.agent_id,AgentInfo.name,Role.role,
-                AgentInfo.agent_id_card_img_url
+                SELECT
+                    AgentInfo.agent_id,
+                    AgentInfo.name,
+                    Role.role,
+                    AgentInfo.agent_id_card_img_url
                 FROM AgentInfo
                 JOIN Role ON Role.role_id=AgentInfo.role_id
                 WHERE AgentInfo.role_id = '4';
