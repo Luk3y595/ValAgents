@@ -4,7 +4,7 @@
  <!-- Will be 5 column layout to direct users to each agent -->
     <div class="five-column">
         {% for agent in result %}
-        <a href="agent.html">
+        <a href="{{ url_for('agent', id=agent[0]) }}">
             <div> 
                 <!-- Shows ID card image and if it doesn't show should show agent name -->   
                 <img src="{{url_for('static', filename=agent[3]) }}" alt="{{ agent[1] }}">

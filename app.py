@@ -1,4 +1,4 @@
-from flask import Flask, g, render_template
+from flask import Flask, g, render_template, request
 import sqlite3
 
 # Database Function
@@ -26,6 +26,7 @@ def home():
 
 @app.route('/agent.html')
 def agent():
+    agent_id = request.args.get('id')
     # agent page with all the info
     sql = """
             SELECT
@@ -62,8 +63,9 @@ def agent():
             JOIN BestMaps ON BestMaps.best_map_id=AgentInfo.best_map_id
             JOIN WorstMaps ON WorstMaps.worst_map_id=AgentInfo.worst_map_id
             JOIN Flag ON Flag.flag_id=AgentInfo.flag_id
+            WHERE AgentInfo.agent_id = ?
 """
-    results = query_db(sql)
+    results = query_db(sql, (agent_id,), one=True)
     return render_template('agent.html', character=results)
 
 
