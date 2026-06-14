@@ -65,7 +65,9 @@ a {
     text-align: center;
 }
 
-.full-image {
-    display: grid;
-    align-items: start;
+img.full-image {
+    width: 300px;
+    height: 900px;
+    object-fit: cover;
+    object-position: left;
 }
