@@ -38,12 +38,14 @@ a {
   color: #0c1824;
 }
 
+/* The logo in the top left of the navbar */
 .Logo {
     width: 60px;
     height: 60px;
     margin: 15px;
 }
 
+/* four column for the roles in the navbar */
 .four-column {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -54,6 +56,7 @@ a {
     text-align: center;
 }
 
+/* five column for the agent cards in the home page */
 .five-column {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -65,12 +68,14 @@ a {
     text-align: center;
 }
 
+/* box for the full image, size of the box, on the left side of the page */
 .full-image {
     width: 450px;
     height: 900px;
     object-position: left;
 }
 
+/* image should crop and fill the box completely */
 .full-image img {
     height: 100%;
     width: 100%;
