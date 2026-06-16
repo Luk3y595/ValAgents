@@ -81,3 +81,8 @@ a {
     width: 100%;
     object-fit: cover;
 }
+
+/* agent information */
+.agent-info {
+    color: #FFFCF9;
+}
