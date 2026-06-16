@@ -65,9 +65,14 @@ a {
     text-align: center;
 }
 
-img.full-image {
-    width: 300px;
+.full-image {
+    width: 450px;
     height: 900px;
-    object-fit: cover;
     object-position: left;
+}
+
+.full-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
