@@ -13,4 +13,25 @@
       <h2></h2>
       <h3></h3>
    </div>
+<!-- Agent Abilities -->
+   <div class="ability-info">
+      <!-- Signature ability one -->
+      <img src="{{url_for('static', filename=character[21]) }}" alt="{{ character[8] }}">
+      <h2>{{ character[9] }}</h2>
+      <!-- signature ability two, only for Reyna -->
+      <img src="{{url_for('static', filename=character[22]) }}" alt="{{ character[10] }}">
+      <h2>{{ character[11] }}</h2>
+      <!-- ability one -->
+      <img src="{{url_for('static', filename=character[23]) }}" alt="{{ character[12] }}">
+      <h2>{{ character[13] }}</h2>
+      <!-- ability two -->
+      <img src="{{url_for('static', filename=character[24]) }}" alt="{{ character[14] }}">
+      <h2>{{ character[15] }}</h2>
+      <!-- ability three, only for Astra -->
+      <img src="{{url_for('static', filename=character[25]) }}" alt="{{ character[16] }}">
+      <h2>{{ character[17] }}</h2>
+      <!-- Ultimate -->
+      <img src="{{url_for('static', filename=character[26]) }}" alt="{{ character[18] }}">
+      <h2>{{ character[19] }}</h2>
+   </div>
 {% endblock %}
