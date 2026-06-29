@@ -8,10 +8,12 @@
    <div class="agent-info">
       <h2>{{ character[1] }}'s Official Description</h2>
       <h3>{{ character[28] }}</h3>
-      <h2></h2>
-      <h3></h3>
-      <h2></h2>
-      <h3></h3>
+      <h2>{{ character[1] }}'s Best Map</h2>
+      <h3>{{ character[4] }}</h3>
+      <img src="{{url_for('static', filename=character[5])  }}" alt="{{ character[4] }}">
+      <h2>{{ character[1] }}'s Worst Map</h2>
+      <h3>{{ character[6] }}</h3>
+      <img src="{{url_for('static', filename=character[7])  }}" alt="{{ character[6] }}">
    </div>
 <!-- Agent Abilities -->
    <div class="ability-info">
