@@ -68,6 +68,11 @@ a {
     text-align: center;
 }
 
+/* agent id cards and name */
+.agent-profile {
+    color: #FFFCF9;
+}
+
 /* box for the full image, size of the box, on the left side of the page */
 .full-image {
     width: 450px;
