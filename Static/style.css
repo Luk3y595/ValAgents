@@ -87,7 +87,19 @@ a {
     color: #FFFCF9;
 }
 
+/* agent info image */
+.agent-info img {
+    width: 225px;
+    height: 150px;
+}
+
 /* ability information */
 .ability-info {
     color: #FFFCF9;
+}
+
+/* ability info image */
+.ability-info img {
+    width: 100px;
+    height: 100px;
 }
