@@ -79,6 +79,9 @@ a {
     height: 900px;
     flex-shrink: 0;
     object-position: left;
+    color: #FFFCF9;
+    text-align: center;
+    font-size: x-large;
 }
 
 /* image should crop and fill the box completely */
