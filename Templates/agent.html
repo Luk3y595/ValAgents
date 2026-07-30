@@ -9,37 +9,52 @@
    <!-- main info of agent -->
    <div class="agent-details">
       <div class="agent-info">
-         <h2>{{ character[1] }}'s Official Description</h2>
-         <h3>{{ character[28] }}</h3>
+         <div class="section-border">
+            <h2>{{ character[1] }}'s Official Description</h2>
+            <h3>{{ character[28] }}</h3>
+         </div>
 
-         <h2>{{ character[1] }}'s Best Map</h2>
-         <h2>{{ character[4] }}</h2>
-         <img src="{{url_for('static', filename=character[5])  }}" alt="{{ character[4] }}">
+         <div class="section-border">
+            <h2>{{ character[1] }}'s Best Map</h2>
+            <h2>{{ character[4] }}</h2>
+            <img src="{{url_for('static', filename=character[5])  }}" alt="{{ character[4] }}">
+         </div>
 
-         <h2>{{ character[1] }}'s Worst Map</h2>
-         <h2>{{ character[6] }}</h2>
-         <img src="{{url_for('static', filename=character[7])  }}" alt="{{ character[6] }}">
+         <div class="section-border">
+            <h2>{{ character[1] }}'s Worst Map</h2>
+            <h2>{{ character[6] }}</h2>
+            <img src="{{url_for('static', filename=character[7])  }}" alt="{{ character[6] }}">
+         </div>
       </div>
 
       <!-- Agent Abilities -->
       <div class="ability-info">
-         <!-- Signature ability one -->
-         <img src="{{url_for('static', filename=character[21]) }}" alt="{{ character[8] }}">
-         <h2>{{ character[8] }}:</h2> <h3>{{ character[9] }}</h3>
+         <div class="section-border">
+            <!-- Signature ability one -->
+            <img src="{{url_for('static', filename=character[21]) }}" alt="{{ character[8] }}">
+            <h2>{{ character[8] }}:</h2> <h3>{{ character[9] }}</h3>
+         </div>
       </div>
    </div>
 </div>
-<div class="ability-info">
-   <!-- ability one -->
-   <img src="{{url_for('static', filename=character[24]) }}" alt="{{ character[12] }}">
-   <h2>{{ character[14] }}:</h2> <h3>{{ character[15] }}</h3>
+<div class="indented-info">
+   <div class="ability-info">
+      <div class="section-border">
+         <!-- ability one -->
+         <img src="{{url_for('static', filename=character[24]) }}" alt="{{ character[12] }}">
+         <h2>{{ character[14] }}:</h2> <h3>{{ character[15] }}</h3>
 
-   <!-- ability two -->
-   <img src="{{url_for('static', filename=character[23]) }}" alt="{{ character[14] }}">
-   <h2>{{ character[12] }}:</h2> <h3>{{ character[13] }}</h3>
+      <div class="section-border">
+         <!-- ability two -->
+         <img src="{{url_for('static', filename=character[23]) }}" alt="{{ character[14] }}">
+         <h2>{{ character[12] }}:</h2> <h3>{{ character[13] }}</h3>
+      </div>
 
-   <!-- Ultimate -->
-   <img src="{{url_for('static', filename=character[26]) }}" alt="{{ character[18] }}">
-   <h2>{{ character[18] }}:</h2> <h3>{{ character[19] }}</h3>
+      <div class="section-border">
+         <!-- Ultimate -->
+         <img src="{{url_for('static', filename=character[26]) }}" alt="{{ character[18] }}">
+         <h2>{{ character[18] }}:</h2> <h3>{{ character[19] }}</h3>
+      </div>
+   </div>
 </div>
 {% endblock %}

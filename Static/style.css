@@ -27,6 +27,11 @@ h2,h3,h4,h5,h6 {
     background-color: #FF5052;
 }
 
+/* navbar hover */
+.four-column a:hover {
+    background-color: #ff1252;
+}
+
 /* main background colour */
 body {
     background-color: #0c1824;
@@ -98,6 +103,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 5px;
 }
 
 /* agent info image */
@@ -111,7 +117,9 @@ a {
     color: #FFFCF9;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    padding: 5px;
+    padding-top: 10px;
 }
 
 /* ability info image */
@@ -124,14 +132,28 @@ a {
 .agent-page {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
-    padding: 10px;
+    gap: 10px;
+    padding: 5px;
+    padding-top: 30px;
 }
 
 /* agent details */
 .agent-details {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
     flex: 1;
+    padding-top: 20px;
+}
+
+/* border for text */
+.section-border {
+    border-style: inset;
+    border-color: #FF5052;
+    gap: 10px;
+}
+
+/* bottom info that's indented in */
+.indented-info {
+    gap: 10px;
 }
