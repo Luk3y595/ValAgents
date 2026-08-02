@@ -78,6 +78,11 @@ a {
     color: #FFFCF9;
 }
 
+/* scale agent id card and name on hover */
+.agent-profile:hover{
+    transform: scale(1.1);
+}
+
 /* box for the full image, size of the box, on the left side of the page */
 .full-image {
     width: 450px;
