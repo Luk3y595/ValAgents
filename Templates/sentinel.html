@@ -5,9 +5,12 @@
     <div class="five-column">
         {% for sentinel in sentinel %}
         <a href="{{ url_for('agent', id=sentinel[0]) }}">
-            <div> 
-                <!-- Shows ID card image and if it doesn't show should show agent name -->
-                <img src="{{url_for('static', filename=sentinel[3]) }}" alt="{{ sentinel[1] }}">
+            <div class="section-border">
+                <div class="agent-profile">
+                    <!-- Shows ID card image and if it doesn't show should show agent name -->
+                    <img src="{{url_for('static', filename=sentinel[3]) }}" alt="{{ sentinel[1] }}">
+                    <h2> {{ sentinel[1] }} </h2>
+                </div>
             </div>
         </a>
         {% endfor %}

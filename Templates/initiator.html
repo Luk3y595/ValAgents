@@ -5,9 +5,12 @@
     <div class="five-column">
         {% for initiator in initiator %}
         <a href="{{ url_for('agent', id=initiator[0]) }}">
-            <div> 
-                <!-- Shows ID card image and if it doesn't show should show agent name -->
-                <img src="{{url_for('static', filename=initiator[3]) }}" alt="{{ initiator[1] }}">
+            <div class="section-border">
+                <div class="agent-profile">
+                    <!-- Shows ID card image and if it doesn't show should show agent name -->
+                    <img src="{{url_for('static', filename=initiator[3]) }}" alt="{{ initiator[1] }}">
+                    <h2> {{ initiator[1] }} </h2>
+                </div>
             </div>
         </a>
         {% endfor %}
