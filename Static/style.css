@@ -27,6 +27,12 @@ h2,h3,h4,h5,h6 {
     background-color: #FF5052;
 }
 
+/* role navbar section */
+.role-nav-bar {
+    margin-left: auto;
+    padding-right: 60px;
+}
+
 /* navbar hover */
 .four-column a:hover {
     background-color: #ff1252;
