@@ -1,5 +1,7 @@
-from flask import Flask, g, render_template, request
+"""Module providing a SQL version for use"""
+
 import sqlite3
+from flask import Flask, g, render_template, request
 
 # Database Function
 DATABASE = 'ValAgents.db'
@@ -10,6 +12,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
+    """Function that is used to display all that is on the home page"""
+
     # home page - shows only
     sql = """
                 SELECT
@@ -26,6 +30,7 @@ def home():
 
 @app.route('/agent.html')
 def agent():
+    """Function used to display all information about the selected agent"""
     agent_id = request.args.get('id')
     # agent page with all the info
     sql = """
@@ -69,6 +74,8 @@ def agent():
 
 @app.route('/duelist.html')
 def duelist():
+    """Function to show a page similar to home page
+    but they only show the duelists"""
     # home page - duelist only
     sql = """
                 SELECT
@@ -86,6 +93,8 @@ def duelist():
 
 @app.route('/initiator.html')
 def initiator():
+    """Function to show a page similar to home page
+        but they only show the initiators"""
     # home page - initiator only
     sql = """
                 SELECT
@@ -103,6 +112,8 @@ def initiator():
 
 @app.route('/sentinel.html')
 def sentinel():
+    """Function to show a page similar to home page
+        but they only show the sentinels"""
     # home page - sentinel only
     sql = """
                 SELECT
@@ -120,6 +131,8 @@ def sentinel():
 
 @app.route('/controller.html')
 def controller():
+    """Function to show a page similar to home page
+        but they only show the controllers"""
     # home page - controller only
     sql = """
                 SELECT
@@ -136,6 +149,8 @@ def controller():
 
 
 def get_db():
+    """Function used to connect and retrieve
+    the information from the database which is then shown to the user"""
     db = getattr(g, '_database', None)
     if db is None:
         db = g._database = sqlite3.connect(DATABASE)
@@ -143,13 +158,17 @@ def get_db():
 
 
 @app.teardown_appcontext
-def close_connection(exception):
+def close_connection():
+    """Function used to disconnect SQLite database connection
+    at the end of the request"""
     db = getattr(g, '_database', None)
     if db is not None:
         db.close()
 
 
 def query_db(query, args=(), one=False):
+    """Function used to run SQL query, fetch the results,
+    close the cursor, and return all the rows or just one row"""
     cur = get_db().execute(query, args)
     rv = cur.fetchall()
     cur.close()
