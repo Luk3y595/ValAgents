@@ -27,7 +27,7 @@ def home():
                 JOIN Role ON Role.role_id=AgentInfo.role_id;
 """
     results = query_db(sql)
-    return render_template('home.html', result=results)
+    return render_template('index.html', result=results)
 
 
 @app.route('/agent.html')
