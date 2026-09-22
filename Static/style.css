@@ -86,7 +86,7 @@ a {
 
 /* scale agent id card and name on hover */
 .agent-profile:hover{
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
 /* box for the full image, size of the box, on the left side of the page */
