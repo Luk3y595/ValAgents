@@ -1,10 +1,12 @@
 """Module providing a SQL version for use"""
 
+import os
 import sqlite3
 from flask import Flask, g, render_template, request
 
 # Database Function
-DATABASE = 'ValAgents.db'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATABASE = os.path.join(BASE_DIR, 'ValAgents.db')
 
 # Initialise App
 app = Flask(__name__)
