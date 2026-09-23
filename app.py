@@ -27,7 +27,7 @@ def home():
                 JOIN Role ON Role.role_id=AgentInfo.role_id;
 """
     results = query_db(sql)
-    return render_template('index.html', result=results)
+    return render_template('home.html', result=results)
 
 
 @app.route('/agent.html')
@@ -160,7 +160,7 @@ def get_db():
 
 
 @app.teardown_appcontext
-def close_connection():
+def close_connection(_exception):
     """Function used to disconnect SQLite database connection
     at the end of the request"""
     db = getattr(g, '_database', None)

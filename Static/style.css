@@ -82,11 +82,16 @@ a {
 /* agent id cards and name */
 .agent-profile {
     color: #FFFCF9;
+    opacity: 0.3;
+    filter: grayscale(0.7);
+    transition: opacity 0.2s ease, filter 0.2s ease, transform 0.2s ease;
 }
 
 /* scale agent id card and name on hover */
 .agent-profile:hover{
-    transform: scale(1.02);
+    opacity: 1;
+    filter: grayscale(0);    
+    transform: scale(1.05);
 }
 
 /* box for the full image, size of the box, on the left side of the page */
