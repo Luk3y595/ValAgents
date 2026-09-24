@@ -15,8 +15,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     """Function that is used to display all that is on the home page"""
-
-    # home page - shows only
+    # home page - only shows name and id card
     sql = """
                 SELECT
                     AgentInfo.agent_id,
@@ -78,7 +77,8 @@ def agent():
 def duelist():
     """Function to show a page similar to home page
     but they only show the duelists"""
-    # home page - duelist only
+    # home page - duelists only - name and id card
+    #role_id values are: 1 = Duelist, 2 = initiator, 3 = sentinel, 4 = controller
     sql = """
                 SELECT
                     AgentInfo.agent_id,
@@ -97,7 +97,7 @@ def duelist():
 def initiator():
     """Function to show a page similar to home page
         but they only show the initiators"""
-    # home page - initiator only
+    # home page - initiator only - name and id card
     sql = """
                 SELECT
                     AgentInfo.agent_id,
@@ -116,7 +116,7 @@ def initiator():
 def sentinel():
     """Function to show a page similar to home page
         but they only show the sentinels"""
-    # home page - sentinel only
+    # home page - sentinel only - name and id card
     sql = """
                 SELECT
                     AgentInfo.agent_id,
@@ -135,7 +135,7 @@ def sentinel():
 def controller():
     """Function to show a page similar to home page
         but they only show the controllers"""
-    # home page - controller only
+    # home page - controller only - name and id card
     sql = """
                 SELECT
                     AgentInfo.agent_id,

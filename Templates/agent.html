@@ -10,17 +10,20 @@
    <div class="agent-details">
       <div class="agent-info">
          <div class="section-border">
+            <!-- name of agent followed by description of agent -->
             <h2>{{ character[1] }}'s Official Description</h2>
             <h3>{{ character[25] }}</h3>
          </div>
 
          <div class="section-border">
+            <!-- character then best map followed by image and name of the map -->
             <h2>{{ character[1] }}'s Best Map</h2>
             <h2>{{ character[4] }}</h2>
             <img src="{{url_for('static', filename=character[5])  }}" alt="{{ character[4] }}">
          </div>
 
          <div class="section-border">
+            <!-- character then worst map followed with image and name of the map -->
             <h2>{{ character[1] }}'s Worst Map</h2>
             <h2>{{ character[6] }}</h2>
             <img src="{{url_for('static', filename=character[7])  }}" alt="{{ character[6] }}">
@@ -31,7 +34,9 @@
       <div class="ability-info">
          <div class="section-border">
             <!-- Signature ability one -->
+            <!-- Image of Signature ability one -->
             <img src="{{url_for('static', filename=character[19]) }}" alt="{{ character[8] }}">
+            <!-- Name and info of Signature ability one -->
             <h2>{{ character[8] }}:</h2> <h3>{{ character[9] }}</h3>
          </div>
       </div>
@@ -41,18 +46,24 @@
    <div class="ability-info">
       <div class="section-border">
          <!-- ability one -->
+         <!-- Image of ability one -->
          <img src="{{url_for('static', filename=character[21]) }}" alt="{{ character[10] }}">
+         <!-- name and info of ability one -->
          <h2>{{ character[12] }}:</h2> <h3>{{ character[13] }}</h3>
 
       <div class="section-border">
          <!-- ability two -->
+         <!-- Image of ability two -->
          <img src="{{url_for('static', filename=character[20]) }}" alt="{{ character[12] }}">
+         <!-- Name and info of ability two -->
          <h2>{{ character[10] }}:</h2> <h3>{{ character[11] }}</h3>
       </div>
 
       <div class="section-border">
          <!-- Ultimate -->
+         <!-- Image of Ultimate -->
          <img src="{{url_for('static', filename=character[23]) }}" alt="{{ character[16] }}">
+         <!-- Name and info of Ultimate -->
          <h2>{{ character[16] }}:</h2> <h3>{{ character[17] }}</h3>
       </div>
    </div>
