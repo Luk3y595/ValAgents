@@ -78,7 +78,8 @@ def duelist():
     """Function to show a page similar to home page
     but they only show the duelists"""
     # home page - duelists only - name and id card
-    #role_id values are: 1 = Duelist, 2 = initiator, 3 = sentinel, 4 = controller
+    # role_id values are: 1 = Duelist, 2 = initiator,
+    # 3 = sentinel, 4 = controller
     sql = """
                 SELECT
                     AgentInfo.agent_id,
